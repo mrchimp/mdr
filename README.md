@@ -56,3 +56,8 @@ Italic and strikethrough aren't widely supported so I've made them coloured as w
 * Pass command line arguments to marked, eg, gfm, breaks, 
 * Make paginatable - output content to `less -r` or something? Why doesn't this work? Colours get lost.
 * Detect italic support?
+* Ordered lists 
+
+## Screenshot ##
+
+![RMD Screenshot](http://deviouschimp.co.uk/misc/rmd-screenshot.png)
