@@ -57,6 +57,7 @@ Italic and strikethrough aren't widely supported so I've made them coloured as w
 * Make paginatable - output content to `less -r` or something? Why doesn't this work? Colours get lost.
 * Detect italic support?
 * Ordered lists 
+* Allow `rmd -g user/repo` and `rmd -b user/repo`
 
 ## Screenshot ##
 
