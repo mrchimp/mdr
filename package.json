@@ -1,6 +1,6 @@
 {
   "name": "rmd",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Read markdown files in the terminal in color",
   "main": "lib",
   "bin": {
