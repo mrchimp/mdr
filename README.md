@@ -11,7 +11,7 @@ Display markdown files in color.
 
 Install the `rmd` command globally
 
-    npm install -g
+    npm install -g rmd
 
 Then you can do the following...
 
