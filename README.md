@@ -49,15 +49,10 @@ Italic and strikethrough aren't widely supported so I've made them coloured as w
 
 ## Things I might get around to ##
 
-* Look for other readme filenames - reademe.md, README.markdown, readme.md etc
-* Handle more than just utf8
 * Improve pad() implementation
 * Syntax highlighting for code blocks
-* Pass command line arguments to marked, eg, gfm, breaks, 
 * Make paginatable - output content to `less -r` or something? Why doesn't this work? Colours get lost.
 * Detect italic support?
-* Ordered lists 
-* Allow `rmd -g user/repo` and `rmd -b user/repo`
 
 ## Screenshot ##
 
