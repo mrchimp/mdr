@@ -1,0 +1,24 @@
+{
+  "name": "rmd",
+  "version": "0.0.0",
+  "description": "Read markdown files in the terminal in color",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jake Gully (chimpytk@gmail.com)",
+  "keywords": [
+  	"markdown",
+  ],
+  "bugs": "https://github.com/mrchimp/rmd/issues",
+  "repository": "https://github.com/mrchimp/rmd",
+  "homepage": "https://github.com/mrchimp/rmd",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "~0.3.2",
+    "ent": "~2.0.0",
+    "chalk": "~0.5.1",
+    "yargs": "~1.3.1"
+  },
+  "engines": "*"
+}
