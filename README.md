@@ -2,6 +2,10 @@
 
 Display markdown files in color.
 
+# Requirements #
+
+  * [Node](http://nodejs.org/)
+  * npm (comes bundled with Node)
 
 ## Usage ##
 
