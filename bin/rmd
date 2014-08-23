@@ -9,6 +9,8 @@ var yargs = require('yargs')
     .usage('Render markdown files in color.')
     .example('$0 foo.md -i', 'show foo.md with inverted colors')
     .help('help', 'test')
+    .alias('f', 'file')
+    .describe('f', 'File to show. Alternatively, specify as first parameter.')
     .alias('i', 'invert')
     .describe('i', 'Use light on dark display')
     .alias('g', 'github')
@@ -29,6 +31,12 @@ var options = {
     bitbucket: yargs.bitbucket,
     help: yargs.help
 };
+
+// Get from positional argument by default
+// Other wise use hyphenated argument
+if (!options.file) {
+    options.file = yargs.file;
+}
 
 if (options.version) {
     console.log(pkg.version);
