@@ -1,8 +1,11 @@
 {
   "name": "rmd",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "Read markdown files in the terminal in color",
-  "main": "index.js",
+  "main": "lib",
+  "bin": {
+    "rmd": "bin/rmd"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
