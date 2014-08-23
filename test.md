@@ -21,21 +21,19 @@ These lines should end with line breaks.
 
 # Blockquotes #
 
- > This is a blockquote. "The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee."
 
- > Here are some nested blockquote. Dear Sir stroke Madam, I am writing to inform you of a fire which has broken out at the premises of... Graphic homoeroticism? Does that mean they're going to get them out? Hello? I've had a bit of a tumble. Unbelievable! Some idiot disabled his firewall, meaning all the computers on Seven are teeming with viruses, plus I've just had to walk all the way down the motherfudging stairs, because the lifts are broken AGAIN! I've got Aunt Irma visiting. Oh, do you not like Aunt Irma? I've got an aunt like that. I am a man, he's a man, we're men! Ok, tell me how your feeling. I feel delicate... and annoyed, and... I think I'm ugly. We don't need no education. Yes you do. You've just used a double negative.
+ > This is a blockquote. The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.
+
+----------------
+
+As you can see, nested blockquotes don't work.
+
+ > Here are some nested blockquote. Dear Sir stroke Madam, I am writing to inform you of a fire which has broken out at the premises of... Graphic homoeroticism? Does that mean they're going to get them out? Hello? I've had a bit of a tumble. Unbelievable! Some idiot disabled his firewall, meaning all the computers on Seven are teeming with viruses, plus I've just had to walk all the way down the motherfudging stairs, because the lifts are broken AGAIN!
  > 
- > > Tomorrow vee come back und cut off your chonson. Here's the name and number of a doctor who will look at it for you. You will receive no bill. He's a good man. And thorough. Faucibus tristique nullam non accumsan justo nulla facilisi integer interdum elementum. Nihilists! Jesus. Nulla, nec eleifend nisl euismod ac maecenas vitae eros velit, eu suscipit. I mean his wife goes out and owes money and they pee on my rug. Erat integer purus lacus, pretium vel venenatis.
+ > > Tomorrow vee come back und cut off your chonson. Here's the name and number of a doctor who will look at it for you. You will receive no bill. He's a good man. And thorough. Faucibus tristique nullam non accumsan justo nulla facilisi integer interdum elementum. Nihilists! Jesus.
+
 
 # Lists #
-
-## Ordered ##
-
-1. This
-2. Is
-3. An
-4. Ordered
-5. List
 
 ## Unordered ##
 
@@ -44,29 +42,37 @@ These lines should end with line breaks.
 * Is
 * Unordered
 
+## Ordered ##
+
+Ordered lists have no numbers
+
+---------------
+
+1. This
+2. Is
+3. An
+4. Ordered
+5. List
+
 ## Nested Lists ##
 
- 1. First, get these ingredients:
+Nested lists are borked too.
 
-      * carrots
-      * celery
-      * lentils
+----------------
 
- 2. Boil some water.
+ 1. Element One
 
- 3. Dump everything in the pot and follow
-    this algorithm:
+      * foo
+      * bar
 
-        find wooden spoon
-        uncover pot
-        stir
-        cover pot
-        balance wooden spoon precariously on pot handle
-        wait 10 minutes
-        goto first step (or shut off burner when done)
+ 2. Element Two
 
-    Do not bump wooden spoon or it will fall.
+ 3. Element Three
 
+        here's a thing
+        and another thing
+
+    This text is part of element three.
 
 # Horizontal Rules #
 

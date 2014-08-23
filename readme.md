@@ -1,6 +1,6 @@
 # rmd #
 
-Read Mark Down. Display markdown files in the terminal in color.
+Display markdown files in color.
 
 
 ## Usage ##
@@ -45,17 +45,18 @@ That's about it.
 
 ## Notes ##
 
-Italic and strike through aren't widely supported.
+Italic and strike through aren't widely supported so I've made them coloured as well. They will show as italic and struck through where possible.
 
 
 ## Things I might get around to ##
 
 * if no argument, lookfor readme.md or similar
+* Handle more than just utf8
 * --gh load readme.md from github
 * --bb load readme.md from bitbucket
 * Improve pad() implementation
-* Syntax highlighting
+* Syntax highlighting for code blocks
 * Pass command line arguments to marked, eg, gfm, breaks, 
-* smartypants?
-* make paginatable - output content to `less -r` or something?
+* Smartypants?
+* Make paginatable - output content to `less -r` or something?
 * Detect italic support?

@@ -69,14 +69,14 @@ if (invert) {
         blockquote: chalk.gray,
         html:       chalk.bgRed.gray,
         headings: [
-            chalk.bgBlue.white.underline.bold,
-            chalk.bgGreen.white.underline.bold,
-            chalk.bgCyan.white.underline.bold,
-            chalk.bgMagenta.white.underline.bold,
-            chalk.bgYellow.white.underline.bold,
-            chalk.bgRed.white.underline.bold
+            chalk.bgBlue.white.bold,
+            chalk.bgGreen.white.bold,
+            chalk.bgCyan.white.bold,
+            chalk.bgMagenta.white.bold,
+            chalk.bgYellow.white.bold,
+            chalk.bgRed.white.bold
         ],
-        hr:         chalk.black,
+        hr:         chalk.yellow,
         listbullet: chalk.gray,
         listitem:   chalk.black,
         p:          chalk.black,
@@ -87,10 +87,10 @@ if (invert) {
         // Inline
         strong:   chalk.cyan,
         em:       chalk.yellow.dim.italic,
-        codespan: chalk.black.dim.bold,
+        codespan: chalk.inverse.dim.bold,
         del:      chalk.bgWhite.gray.strikethrough,
         link:     chalk.underline,
-        image:    chalk.bgGreen.black.underline,
+        image:    chalk.bgYellow.black.underline,
     }
 }
 
@@ -136,10 +136,10 @@ function pad(text, gutter_str, gutter_size, width) {
         output = '';
 
     for (var x = 0; x < split.length; x++) {
-        if (x == 0 ) {
-            repeat(gutter_str, gutter_size - 2 ) + '" '
+        if (x == 1 ) {
+            output += repeat(gutter_str, gutter_size - 2 ) + '" '
         } else {
-            repeat(gutter_str, gutter_size)
+            output += repeat(gutter_str, gutter_size)
         }
         output += split[x] + repeat(gutter_str, gutter_size) + '\n';
     }
@@ -234,7 +234,7 @@ rend.link = function(href, title, text) {
     return output;
 };
 rend.image = function(href, title, text) {
-    var output = '[';
+    var output = ' ';
 
     if (title) {
         output += title;
@@ -246,7 +246,7 @@ rend.image = function(href, title, text) {
         output += ' - ' + text;
     }
 
-    output += ' - ' + href + ']';
+    output += ' - ' + href + ' ';
     return style.image(output);
 };
 
