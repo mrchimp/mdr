@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+'use strict';
+
+
+var request = require('request');
+var pkg = require('../package.json');
+var rmd = require('../lib');
+var yargs = require('yargs')
+    .usage('Render markdown files in color.')
+    .example('$0 foo.md -i', 'show foo.md with inverted colors')
+    .help('help', 'test')
+    .alias('i', 'invert')
+    .describe('i', 'Use light on dark display')
+    .alias('g', 'github')
+    .describe('g', 'Get readme file from Github project')
+    .alias('b', 'bitbucket')
+    .describe('b', 'Get readme file from Bitbucket project')
+    .alias('h', 'help')
+    .describe('h', 'Show this help message')
+    .alias('v', 'version')
+    .describe('v', 'Show version number')
+    .argv;
+
+var options = {
+    file: typeof yargs._[0] !== undefined ? yargs._[0] : null,
+    invert: yargs.invert,
+    version: yargs.version,
+    github: yargs.github,
+    bitbucket: yargs.bitbucket,
+    help: yargs.help
+};
+
+if (options.version) {
+    console.log(pkg.version);
+    process.exit();
+}
+
+rmd.run(options, function(output) {
+    console.log(output);
+});

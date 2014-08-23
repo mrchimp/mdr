@@ -12,9 +12,9 @@ Once the project is ready you'll be able to do the following...
 Then you can do the following...
 
     rmd                            # Show README.md
-    rmd -i                         # Use light-on-dark style
+    rmd foo.md -i                  # Use light-on-dark style
     rmd http://example.com/foo.md  # Show foo.md from a the web
-    rmd -g mrchimp/rmd             # Show README.md from Github repo
+    rmd mrchimp/rmd -g             # Show README.md from Github repo
 
 That's about it.
 
