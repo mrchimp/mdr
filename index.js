@@ -4,14 +4,19 @@ var marked = require('marked'),
     chalk = require('chalk'),
     fs = require('fs'),
     ent = require('ent'),
+    request = require('request'),
     yargs = require('yargs')
         .usage('Render markdown files in color.')
-        .example('readme.md -i', 'show readme.md with inverted colors')
+        .example('$0 foo.md -i', 'show foo.md with inverted colors')
         .help('help', 'test')
         .alias('f', 'file')
         .describe('f', 'File to display')
         .alias('i', 'invert')
         .describe('i', 'Use light on dark display')
+        .alias('g', 'github')
+        .describe('g', 'Get readme file from Github project')
+        .alias('b', 'bitbucket')
+        .describe('b', 'Get readme file from Bitbucket project')
         .alias('h', 'help')
         .describe('h', 'Show this help message')
         .argv;
@@ -94,15 +99,6 @@ if (invert) {
     }
 }
 
-if (!file_path) {
-    file_path = yargs.file;
-}
-if (!file_path) {
-    console.log('No filename given. Looking for readme.md...');
-    file_path = 'readme.md';
-}
-
-
 /**
  * Repeat a string
  * http://stackoverflow.com/a/5450113/130347
@@ -145,6 +141,61 @@ function pad(text, gutter_str, gutter_size, width) {
     }
 
     return output;
+}
+
+/**
+ * Take a string and return formatted result
+ * @param  {String} data Markdown string
+ * @return {String}      Formatted result
+ */
+function render(data) {
+    'use strict';
+
+    return marked(data, {
+        renderer: rend,
+        smartLists: true,
+        gfm: true
+    });
+}
+
+/**
+ * Read and render a file from the web
+ * @param  {String} url Location of file
+ * @return {Undefined}     
+ */
+function readRemoteFile(url) {
+    if (url.substring(0,4) != 'http') {
+        url = 'http://' + url;
+    }
+
+    console.log('Getting remote file: ' + url);
+
+    request.get(url, function (error, response, body) {
+
+        if (error || response.statusCode !== 200) {
+            console.log('Couldn\'t read remote file. Error code ' + response.statusCode + '.');
+        } else {
+            console.log(render(body));
+        }
+    });
+}
+
+/**
+ * Read and render a local file
+ * @param  {String} filename Path to file
+ * @return {Undefined}
+ */
+function readLocalFile(filename) {
+    fs.readFile(file_path, 'utf8', function (err, data) {
+        'use strict';
+
+        if (err) {
+            console.log('Couldn\'t open file: ' + err);
+            process.exit();
+        }
+
+        console.log(render(data));
+    });
 }
 
 
@@ -251,23 +302,30 @@ rend.image = function(href, title, text) {
 };
 
 
-fs.readFile(file_path, 'utf8', function (err, data) {
-    'use strict';
-
-    if (err) {
-        console.log('Couldn\'t open file.');
+if (yargs.github) {
+    var url = 'https://github.com/' + yargs.github + '/raw/master/README.md';
+    readRemoteFile(url);
+} else if (yargs.bitbucket) {
+    var url = 'https://bitbucket.org/' + yargs.bitbucket + '/raw/master/README.md';
+    readRemoteFile(url);
+} else {
+    // First, try and use given file name
+    if (!file_path) {
+        file_path = yargs.file;
     }
 
-    render(data);
-});
+    // If no file name, default to readme.md
+    if (!file_path) {
+        console.log('No filename given. Looking for README.md...');
+        file_path = 'README.md';
+    }
 
-
-function render(data) {
-    'use strict';
-
-    console.log(marked(data, {
-        renderer: rend,
-        smartLists: true,
-        gfm: true
-    }));
+    // If file exists, render it. Else try getting from web
+    fs.stat(file_path, function (err, stat) {
+        if (!err) {
+            readLocalFile(file_path);
+        } else {
+            readRemoteFile(file_path);
+        }
+    });
 }
