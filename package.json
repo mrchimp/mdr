@@ -6,12 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jake Gully (chimpytk@gmail.com)",
+  "author": "Jake Gully <jake@deviouschimp.co.uk> (http://deviouschimp.co.uk)",
+  "contributors": ["Jake Gully <jake@deviouschimp.co.uk> (http://deviouschimp.co.uk)"],
   "keywords": [
-  	"markdown",
+  	"markdown"
   ],
   "bugs": "https://github.com/mrchimp/rmd/issues",
-  "repository": "https://github.com/mrchimp/rmd",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrchimp/rmd"
+  },
   "homepage": "https://github.com/mrchimp/rmd",
   "license": "MIT",
   "dependencies": {
@@ -20,5 +24,7 @@
     "chalk": "~0.5.1",
     "yargs": "~1.3.1"
   },
-  "engines": "*"
+  "engines": {
+    "node": "*"
+  }
 }
