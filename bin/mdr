@@ -18,6 +18,8 @@ var yargs = require('yargs')
     .describe('b', 'Get readme file from Bitbucket project')
     .alias('h', 'help')
     .describe('h', 'Show this help message')
+    .alias('s', 'simple-headers')
+    .describe('s', 'Hide hashes in headings')
     .alias('v', 'version')
     .describe('v', 'Show version number')
     .argv;
@@ -28,7 +30,8 @@ var options = {
     version: yargs.version,
     github: yargs.github,
     bitbucket: yargs.bitbucket,
-    help: yargs.help
+    help: yargs.help,
+    simple_headers: yargs.s
 };
 
 // Get from positional argument by default
