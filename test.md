@@ -19,8 +19,33 @@ These lines should end with line breaks.
 These lines should end with line breaks.  
 These lines should end with line breaks.  
 
-# Blockquotes #
+# Emphasis and Strong #
 
+I'm speaking normally here *but this bit has emphasis* because I feel it's important. And **this bit is really strong**, because seriously. Here's some text ***that's strong and emphasised*** and for some reason is colored blue.
+
+# Links #
+
+[This is a link to Github](http://github.com)  
+[This is another link](http://example.com)
+
+# Code Blocks #
+
+    var this_line = 'a block of code';
+    this_line.is('also code');
+    
+    if (this.renders)  {
+        kettle.fill().turnOn();
+    }
+
+# Inline Code #
+
+Here's a paragraph with bits of code like `var foo = (bar * koala);` in it. Inline code `print('woo')` yay.
+
+# Horizontal Rules #
+
+---------------
+
+# Blockquotes #
 
  > This is a blockquote. The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.
 
@@ -73,33 +98,6 @@ Nested lists are borked too.
         and another thing
 
     This text is part of element three.
-
-# Horizontal Rules #
-
----------------
-
-
-# Code Blocks #
-
-    var this_line = 'a block of code';
-    this_line.is('also code');
-    
-    if (this.renders)  {
-        kettle.fill().turnOn();
-    }
-
-# Inline Code #
-
-Here's a paragraph with bits of code like `var foo = (bar * koala);` in it. Inline code `print('woo')` yay.
-
-# Links #
-
-[This is a link to Github](http://github.com)  
-[This is another link](http://example.com)
-
-# Emphasis and Strong #
-
-I'm speaking normally here *but this bit has emphasis* because I feel it's important. And **this bit is really strong**, because seriously.
 
 # Image #
 
