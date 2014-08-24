@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 'use strict';
 
-
 var request = require('request');
 var pkg = require('../package.json');
-var rmd = require('../lib');
+var mdr = require('../lib');
 var yargs = require('yargs')
     .usage('Render markdown files in color.')
     .example('$0 foo.md -i', 'show foo.md with inverted colors')
@@ -43,6 +42,6 @@ if (options.version) {
     process.exit();
 }
 
-rmd.run(options, function(output) {
+mdr.run(options, function(output) {
     console.log(output);
 });

@@ -1,10 +1,10 @@
 {
-  "name": "rmd",
+  "name": "mdr",
   "version": "0.0.5",
   "description": "Read markdown files in the terminal in color",
   "main": "lib",
   "bin": {
-    "rmd": "bin/rmd"
+    "mdr": "bin/mdr"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,12 +16,12 @@
   "keywords": [
     "markdown"
   ],
-  "bugs": "https://github.com/mrchimp/rmd/issues",
+  "bugs": "https://github.com/mrchimp/mdr/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mrchimp/rmd"
+    "url": "https://github.com/mrchimp/mdr"
   },
-  "homepage": "https://github.com/mrchimp/rmd",
+  "homepage": "https://github.com/mrchimp/mdr",
   "license": "MIT",
   "dependencies": {
     "chalk": "~0.5.1",
