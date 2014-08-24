@@ -6,12 +6,20 @@ var pkg = require('../package.json');
 var mdr = require('../lib');
 var conf = require('rc')('mdr', {
     file: '',
-    invert: false,
-    version: false,
+    f: '',
     github: null,
+    g: null,
     bitbucket: null,
+    b: null,
+    branch: null,
+    B: null,
+    invert: false,
+    i: false,
+    simple_headers: false,
+    s: false,
     help: false,
-    simple_headers: false
+    h: false,
+    version: false
 });
 
 var options = {
@@ -20,6 +28,7 @@ var options = {
     version: conf.version,
     github: conf.github || conf.g,
     bitbucket: conf.bitbucket || conf.b,
+    branch: conf.branch || conf.B || 'master',
     help: conf.help || conf.h,
     simple_headings: conf.simpleheadings || conf.s
 };
@@ -33,6 +42,7 @@ if (options.help) {
         '                        Alternatively specify as first parameter\n' + 
         '  -g, --github          Get file from Github repository\n' + 
         '  -b, --bitbucket       Get file from Bitbucket repository\n' + 
+        '  -B, --branch          Git branch to fetch file from\n' +
         '  -i, --invert          Use dark-on-light theme\n' + 
         '  -s, --simpleheadings  Hide hashes in headings\n' + 
         '  -h, --help            Show this help message\n' + 

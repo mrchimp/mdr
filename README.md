@@ -15,7 +15,7 @@ Install the `mdr` command globally
 
 ## Usage ##
 
-    mdr [file] [-g github_repo | -b bitbucket_repo | -h | -v] [-i] [-s]
+    mdr [file] [[-g github_repo | -b bitbucket_repo] [-B] | -h | -v] [-i] [-s]
 
 The first parameter should be a file name or url. If not provided, this will default to `README.md`. `github_repo` and `bitbucket_repo` should be in the format `user/rpo` e.g. `mrchimp/mdr`.
 
