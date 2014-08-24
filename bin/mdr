@@ -14,29 +14,6 @@ var conf = require('rc')('mdr', {
     simple_headers: false
 });
 
-
-// var yargs = require('yargs')
-//     .usage('Render markdown files in color.')
-//     .example('$0 foo.md -i', 'show foo.md with inverted colors')
-//     .help('help', 'test')
-//     .alias('f', 'file')
-//     .describe('f', 'File to show. Alternatively, specify as first parameter.')
-//     .alias('g', 'github')
-//     .describe('g', 'Get readme file from Github project')
-//     .alias('b', 'bitbucket')
-//     .describe('b', 'Get readme file from Bitbucket project')
-//     .alias('i', 'invert')
-//     .describe('i', 'Use dark on light display')
-//     .alias('s', 'simple-headers')
-//     .describe('s', 'Hide hashes in headings')
-//     .alias('h', 'help')
-//     .describe('h', 'Show this help message')
-//     .alias('v', 'version')
-//     .describe('v', 'Show version number')
-//     .argv;
-
-
-
 var options = {
     file: conf.f || conf.file || conf._[0] || 'README.md',
     invert: conf.invert || conf.i,
@@ -57,7 +34,7 @@ if (options.help) {
         '  -g, --github          Get file from Github repository\n' + 
         '  -b, --bitbucket       Get file from Bitbucket repository\n' + 
         '  -i, --invert          Use dark-on-light theme\n' + 
-        '  -s, --simpleheadings  Use dark-on-light theme\n' + 
+        '  -s, --simpleheadings  Hide hashes in headings\n' + 
         '  -h, --help            Show this help message\n' + 
         '  --version             Show version number');
     process.exit();
