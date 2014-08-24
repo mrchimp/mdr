@@ -7,20 +7,27 @@ Markdown reader with color
   * [Node](http://nodejs.org/)
   * npm (comes bundled with Node)
 
-## Usage ##
+## Installation ##
 
 Install the `mdr` command globally
 
     npm install -g mdr
 
-Then you can do the following...
+## Usage ##
+
+    mdr [file] [-g github_repo] [-b bitbucket_repo] [-i] [-h] [-s] [-v]
+
+The first parameter should be a file name or url. If not provided, this will default to `README.md`. `github_repo` and `bitbucket_repo` should be in the format `user/rpo` e.g. `mrchimp/mdr`.
+
+Here are some things you can do:
 
     mdr                            # Show README.md from current directory
     mdr foo.md -i                  # Use dark-on-light style
     mdr http://example.com/foo.md  # Show foo.md from a the web
-    mdr mrchimp/mdr -g             # Show README.md from Github repo
+    mdr -g mrchimp/mdr             # Show README.md from Github repo
+    mdr foo.md -g bar/bar          # Show foo.md from Bitbucket repo
 
-Do `mdr -h` for more help.
+`mdr -h` for more help.
  
 
 ## Notes ##
