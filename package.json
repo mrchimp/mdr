@@ -1,6 +1,6 @@
 {
   "name": "mdr",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Read markdown files in the terminal in color",
   "main": "lib",
   "bin": {
