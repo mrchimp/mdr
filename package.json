@@ -1,6 +1,6 @@
 {
   "name": "mdr",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Read markdown files in the terminal in color",
   "main": "lib",
   "bin": {
@@ -27,6 +27,7 @@
     "chalk": "~0.5.1",
     "ent": "~2.0.0",
     "marked": "~0.3.2",
+    "moar": "0.0.9",
     "rc": "^0.5.0",
     "request": "^2.40.0",
     "yargs": "~1.3.1"
