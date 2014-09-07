@@ -32,7 +32,7 @@ Here are some things you can do:
 
 ## Config ##
 
-Config files are found and parsed by [rc](https://www.npmjs.org/package/rc). For example put the following content in `$HOME/.mdrrcrc` or `$HOME/.mdr/config`.
+Config files are found and parsed by [rc](https://www.npmjs.org/package/rc). For example put the following content in `$HOME/.mdrrc` or `$HOME/.mdr/config`.
 
     {
         "invert": "true"
