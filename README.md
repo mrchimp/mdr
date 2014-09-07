@@ -75,7 +75,6 @@ Italic and strikethrough aren't widely supported so I've made them coloured as w
 
 * Improve pad() implementation
 * Syntax highlighting for code blocks
-* Make paginatable - output content to `less -r` or something? Why doesn't this work? Colours get lost.
 * Detect italic support?
 
 ## Screenshot ##
