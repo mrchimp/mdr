@@ -25,7 +25,7 @@ Here are some things you can do:
     mdr foo.md -i                  # Use dark-on-light style
     mdr http://example.com/foo.md  # Show foo.md from a the web
     mdr -g mrchimp/mdr             # Show README.md from Github repo
-    mdr foo.md -g bar/bar          # Show foo.md from Bitbucket repo
+    mdr foo.md -b bar/bar          # Show foo.md from Bitbucket repo
 
 `mdr -h` for more help.
  
