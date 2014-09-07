@@ -1,5 +1,7 @@
 # mdr #
 
+[![NPM version](https://badge.fury.io/js/mdr.svg)](http://badge.fury.io/js/mdr)
+
 Markdown reader with color
 
 # Requirements #
