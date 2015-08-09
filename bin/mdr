@@ -13,6 +13,8 @@ var conf = require('rc')('mdr', {
     b: null,
     branch: null,
     B: null,
+    npm: null,
+    n: null,
     invert: false,
     i: false,
     simple_headers: false,
@@ -29,6 +31,7 @@ var options = {
     github: conf.github || conf.g,
     bitbucket: conf.bitbucket || conf.b,
     branch: conf.branch || conf.B || 'master',
+    npm: conf.branch || conf.n,
     help: conf.help || conf.h,
     simple_headings: conf.simpleheadings || conf.s
 };
@@ -44,6 +47,7 @@ if (options.help) {
         '  -b, --bitbucket       Get file from Bitbucket repository\n' + 
         '  -B, --branch          Git branch to fetch file from\n' +
         '  -i, --invert          Use dark-on-light theme\n' + 
+        '  -n, --npm             Get a NPM package\'s readme\n' +
         '  -s, --simpleheadings  Hide hashes in headings\n' + 
         '  -h, --help            Show this help message\n' + 
         '  --version             Show version number');
