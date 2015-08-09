@@ -28,6 +28,9 @@ Here are some things you can do:
     mdr http://example.com/foo.md  # Show foo.md from a the web
     mdr -g mrchimp/mdr             # Show README.md from Github repo
     mdr foo.md -b bar/bar          # Show foo.md from Bitbucket repo
+    mdr -n mdr                     # Show readme from NPM package
+    mdr -g mrchimp/mdr -B dev      # Show README.md from the dev branch
+                                     of a Github repo
 
 `mdr -h` for more help.
  
