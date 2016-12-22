@@ -82,4 +82,4 @@ Italic and strikethrough aren't widely supported so I've made them coloured as w
 
 ## Screenshot ##
 
-![MDR Screenshot](http://deviouschimp.co.uk/misc/rmd-screenshot.png)
+![MDR Screenshot](http://i.imgur.com/QkwqnCl.png)
