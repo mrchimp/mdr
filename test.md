@@ -1,3 +1,8 @@
+Level One Header
+================
+
+Level Two Header
+----------------
 
 # Level 1 Header #
 ## Level 2 Header ##
@@ -21,7 +26,7 @@ These lines should end with line breaks.
 
 # Emphasis and Strong #
 
-I'm speaking normally here *but this bit has emphasis* because I feel it's important. And **this bit is really strong**, because seriously. Here's some text ***that's strong and emphasised*** and for some reason is colored blue.
+I'm speaking normally here *but this bit has emphasis* because I feel it's important. **This bit is really strong**. Here's some text ***that's strong and emphasised*** because seriously.
 
 # Links #
 
@@ -56,30 +61,19 @@ Here's a paragraph with bits of code like `var foo = (bar * koala);` in it. Inli
 # Blockquotes #
 
  > This is a blockquote. The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.
-
-----------------
-
-As you can see, nested blockquotes don't work.
-
- > Here are some nested blockquote. Dear Sir stroke Madam, I am writing to inform you of a fire which has broken out at the premises of... Graphic homoeroticism? Does that mean they're going to get them out? Hello? I've had a bit of a tumble. Unbelievable! Some idiot disabled his firewall, meaning all the computers on Seven are teeming with viruses, plus I've just had to walk all the way down the motherfudging stairs, because the lifts are broken AGAIN!
- > 
- > > Tomorrow vee come back und cut off your chonson. Here's the name and number of a doctor who will look at it for you. You will receive no bill. He's a good man. And thorough. Faucibus tristique nullam non accumsan justo nulla facilisi integer interdum elementum. Nihilists! Jesus.
+ > > Nested blockquotes are denoted by the first line indentation. Tomorrow vee come back und cut off your chonson. Here's the name and number of a doctor who will look at it for you. You will receive no bill. He's a good man. And thorough. Faucibus tristique nullam non accumsan justo nulla facilisi integer interdum elementum. Nihilists! Jesus.
 
 
 # Lists #
 
-## Unordered ##
+## Unordered Lists ##
 
 * This
 * One
 * Is
 * Unordered
 
-## Ordered ##
-
-Ordered lists have no numbers
-
----------------
+## Ordered Lists ##
 
 1. This
 2. Is
@@ -88,10 +82,6 @@ Ordered lists have no numbers
 5. List
 
 ## Nested Lists ##
-
-Nested lists are borked too.
-
-----------------
 
  1. Element One
 
@@ -102,10 +92,9 @@ Nested lists are borked too.
 
  3. Element Three
 
-        here's a thing
-        and another thing
-
-    This text is part of element three.
+    1. here's a thing
+    2. and another thing
+    3. This text is part of element three.
 
 # Image #
 
