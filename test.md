@@ -31,11 +31,19 @@ I'm speaking normally here *but this bit has emphasis* because I feel it's impor
 # Code Blocks #
 
     var this_line = 'a block of code';
-    this_line.is('also code');
+    this_section.is('denoted by four spaces');
     
     if (this.renders)  {
         kettle.fill().turnOn();
     }
+
+------------
+
+```js
+let code_blocks = 'Denoted by triple back ticks';
+coloured.by('Cardinal');
+override.colors.with('.cardinalrc');
+```
 
 # Inline Code #
 
