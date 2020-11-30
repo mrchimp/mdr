@@ -4,6 +4,10 @@
 
 Markdown reader with color
 
+# Replacement #
+
+I'm working on a replacement for this package, this time using the Rust language. It's much quicker to start up. Basic functionality is already there but I'm not quite done with it yet. I would like some feedback if you're interested.
+
 # Requirements #
 
   * [Node](http://nodejs.org/)
